@@ -25,7 +25,7 @@ note_ids = random.choices(range(0, notes_amt*10000), k=notes_amt)
 states = random.choices(state_types, weights=state_weights, k=notes_amt)
 
 print(note_ids[0], states[0], firearms[0], dates[0].strftime('%Y-%m-%d'))
-with open("generated_weapons_licenses_data.csv", "w", newline="", encoding='utf-8-sig') as file_output:
+with open("datasets_for_analysis/generated_weapons_licenses_data.csv", "w", newline="", encoding='utf-8-sig') as file_output:
     writer = csv.writer(file_output, delimiter=";")
     for i in range(notes_amt):
         writer.writerow([note_ids[i], states[i], firearms[i], dates[i].strftime('%Y-%m-%d')])
