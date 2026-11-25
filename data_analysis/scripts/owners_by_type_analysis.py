@@ -15,6 +15,7 @@ print(amts)
 
 labels = ['Гладкоствольное длинноствольное', 'С нарезным стволом', 'Комбинированное']
 
-plt.pie(amts, labels=labels)
+plt.pie(amts, labels=labels,  autopct='%1.1f%%')
+plt.title('Доли лицензий на гражданское оружие в РФ по типу')
 plt.savefig(image_out_path, dpi=150)
 plt.show()
